@@ -19,14 +19,14 @@ export default function Navbar() {
       </div>
 
       {/* Hamburger Button */}
-      <button
-        className="md:hidden flex flex-col space-y-1"
-        onClick={() => setOpen(!open)}
-      >
-        <span className="w-6 h-[2px] bg-white"></span>
-        <span className="w-6 h-[2px] bg-white"></span>
-        <span className="w-6 h-[2px] bg-white"></span>
-      </button>
+<button
+  className="md:hidden flex flex-col justify-center items-center"
+  onClick={() => setOpen(!open)}
+>
+  <span className={`w-6 h-[2px] bg-white transition ${open ? "rotate-45 translate-y-1.5" : ""}`}></span>
+  <span className={`w-6 h-[2px] bg-white my-1 transition ${open ? "opacity-0" : ""}`}></span>
+  <span className={`w-6 h-[2px] bg-white transition ${open ? "-rotate-45 -translate-y-1.5" : ""}`}></span>
+</button>
 
       {/* Mobile Menu */}
       {open && (
