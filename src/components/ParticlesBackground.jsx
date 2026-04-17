@@ -83,7 +83,7 @@ export default function ParticlesBackground() {
 
         detectRetina: true,
       }}
-      className="absolute inset-0 -z-10"
+      className="absolute inset-0 z-0"
     />
   );
 }
