@@ -1,10 +1,10 @@
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
+import { loadFull } from "tsparticles";
 
 export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine) => {
-    await loadSlim(engine);
+    await loadFull(engine);
   }, []);
 
   return (
@@ -12,53 +12,79 @@ export default function ParticlesBackground() {
       id="tsparticles"
       init={particlesInit}
       options={{
+        fullScreen: false,
         background: {
           color: "transparent",
         },
-        fpsLimit: 60,
+
         particles: {
           number: {
-            value: 80,
+            value: 70,
           },
+
           color: {
-            value: "#e290ea",
+            value: ["#e290ea", "#7209b7", "#3a0ca3"],
           },
+
           links: {
             enable: true,
+            distance: 140,
             color: "#e290ea",
-            distance: 150,
-            opacity: 0.4,
+            opacity: 0.6,
             width: 1,
           },
+
           move: {
             enable: true,
-            speed: 1.5,
+            speed: 1.2,
+            outModes: {
+              default: "bounce",
+            },
           },
+
           opacity: {
-            value: 0.5,
+            value: 0.7,
           },
+
           size: {
-            value: 3,
+            value: { min: 2, max: 4 },
+          },
+
+          // 🔥 GLOW EFFECT
+          shadow: {
+            enable: true,
+            color: "#e290ea",
+            blur: 15,
           },
         },
+
         interactivity: {
           events: {
             onHover: {
               enable: true,
               mode: "grab",
             },
+            onClick: {
+              enable: true,
+              mode: "push",
+            },
           },
           modes: {
             grab: {
-              distance: 140,
+              distance: 160,
               links: {
                 opacity: 1,
               },
             },
+            push: {
+              quantity: 4,
+            },
           },
         },
+
+        detectRetina: true,
       }}
-      className="absolute top-0 left-0 w-full h-full -z-10"
+      className="absolute inset-0 -z-10"
     />
   );
 }
