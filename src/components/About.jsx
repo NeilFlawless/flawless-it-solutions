@@ -1,9 +1,15 @@
 export default function About() {
   return (
     <section id="about" className="py-24 px-6 bg-[#0d0d0d] text-white text-center">
-      <h2 className="text-4xl font-bold mb-6">About Us</h2>
+<h2 className="text-4xl font-bold mb-6" data-aos="fade-up">
+  About Us
+</h2>
 
-      <p className="max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed">
+<p
+  className="max-w-3xl mx-auto text-gray-400 text-lg"
+  data-aos="fade-up"
+  data-aos-delay="200"
+>
         Flawless IT Solutions is a forward-thinking technology company focused on
         delivering high-quality digital solutions. We help businesses transform,
         scale, and innovate using cutting-edge technologies and proven strategies.
