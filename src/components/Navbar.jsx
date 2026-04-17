@@ -30,7 +30,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="absolute top-16 left-0 w-full bg-black text-white flex flex-col items-center space-y-6 py-6 md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-black text-white flex flex-col items-center space-y-6 py-6 md:hidden transition-all duration-300">
           <a href="#services" onClick={() => setOpen(false)}>Services</a>
           <a href="#about" onClick={() => setOpen(false)}>About</a>
           <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
