@@ -9,7 +9,7 @@ export default function Hero() {
 
       {/* 👇 content ABOVE particles */}
       <div className="relative z-10">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 z-10" data-aos="fade-up">
           Flawless IT Solutions
         </h1>
 
