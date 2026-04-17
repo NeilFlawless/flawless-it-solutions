@@ -20,16 +20,18 @@ export default function Services() {
 
   return (
     <section id="services" className="py-24 px-6 bg-[#111] text-white">
-      <h2 className="text-4xl font-bold text-center mb-12">
-        Our Services
-      </h2>
+<h2 className="text-4xl font-bold text-center mb-12" data-aos="fade-up">
+  Our Services
+</h2>
 
-      <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        {services.map((s, i) => (
-          <div
-            key={i}
-            className="p-6 rounded-xl bg-[#1e1e1e] border border-gray-800 hover:border-primary transition"
-          >
+<div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+  {services.map((s, i) => (
+    <div
+      key={i}
+      data-aos="zoom-in"
+      data-aos-delay={i * 100}
+      className="p-6 rounded-xl bg-[#1e1e1e] border border-gray-800 hover:border-primary transition"
+    >
             <h3 className="text-xl font-semibold mb-3 text-primary">
               {s.title}
             </h3>
