@@ -1,13 +1,14 @@
 export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 bg-[#111] text-white text-center">
-      <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
+      <h2 className="text-4xl font-bold mb-6" data-aos="fade-up">Contact Us</h2>
 
       <p className="text-gray-400 mb-8">
         Let’s discuss your project. We’d love to hear from you.
       </p>
 
-      <div className="flex flex-col md:flex-row justify-center gap-4">
+      <div
+  className="flex flex-col md:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
         <input
           type="text"
           placeholder="Your Name"
