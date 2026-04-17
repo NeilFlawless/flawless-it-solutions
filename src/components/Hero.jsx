@@ -2,7 +2,7 @@ import ParticlesBackground from "./ParticlesBackground";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex flex-col justify-center items-center text-center px-6 bg-black">
+    <section className="relative h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-black via-[#1e1e2f] to-[#3a0ca3]">
 
       {/* 🔥 Particles */}
       <ParticlesBackground />
